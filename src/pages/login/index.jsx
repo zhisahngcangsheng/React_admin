@@ -9,7 +9,7 @@ export default function Login() {
     const {i18n} = useTranslation();
     let [date,setDate] = useState('0000-00-00 00:00:00')
     useEffect(()=>{
-       const time = setInterval(()=>{
+        const time = setInterval(()=>{
             setDate(dateFormat(new Date()));
         },1000);
         return function (){
@@ -41,7 +41,7 @@ export default function Login() {
                     <p>{date}</p>
                     <Dropdown overlay={menu}>
                         <span className="ant-dropdown-link" onClick={e => e.preventDefault()}>
-                            {i18n.language === 'zh' ? '中文' : 'English'} <DownOutlined />
+                            {i18n.language === 'en' ? 'English' : '中文'} <DownOutlined />
                         </span>
                     </Dropdown>
                 </div>
